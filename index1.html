@@ -9,11 +9,12 @@
         var height = 0, width = 0
 
         do {
-            height = parseInt(prompt("Enter height"))
-            width = parseInt(prompt("Enter width"))
+            height = parseInt(prompt("Enter height (in cm)"))
+            width = parseInt(prompt("Enter width (in cm)"))
         }
         while (height <= 0 || width <= 0 || isNaN(height) || isNaN(width)) // verify numbers
 
+        // construct the rectangle at the center of the page
         document.write(`
         <div style="position: absolute;
         width: ${width}cm;
@@ -22,7 +23,6 @@
         left: 50%;
         margin: -${height*1/2}cm 0 0 -${width*1/2}cm;
         background: lightskyblue;">
-            This is a rectangle!
         </div>`)
     </script>
 
