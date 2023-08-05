@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Draw a rectangle</title>
+</head>
+
+<body>
+    <script>
+        var height = 0, width = 0
+
+        do {
+            height = parseInt(prompt("Enter height"))
+            width = parseInt(prompt("Enter width"))
+        }
+        while (height <= 0 || width <= 0 || isNaN(height) || isNaN(width)) // verify numbers
+
+        document.write(`
+        <div style="position: absolute;
+        width: ${width}cm;
+        height: ${height}cm;
+        top: 50%;
+        left: 50%;
+        margin: -${height*1/2}cm 0 0 -${width*1/2}cm;
+        background: lightskyblue;">
+            This is a rectangle!
+        </div>`)
+    </script>
+
+</body>
+
+</html>
