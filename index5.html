@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Class average</title>
+</head>
+
+<body>
+    <script>
+        var sum = 0, cnt = 0, avg = ""
+
+        do {
+            var currGrade = parseInt(prompt("Enter a student's grade (enter any negative number to finish)"))
+
+            if (currGrade < 0) {
+                avg += `${sum/cnt} `
+                break
+            }
+
+            if (isNaN(currGrade)) {
+                continue
+            }
+
+            sum += currGrade
+            cnt++
+        }
+        while (true) // verify numbers
+
+        // construct the rectangle at the center of the page
+        document.write(`Your class average score is : ${avg}`)
+    </script>
+
+</body>
+
+</html>
